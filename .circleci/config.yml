@@ -8,9 +8,9 @@ jobs: #almost every circleci yaml has one. Basically the main point of the softw
           username: mydockerhub-user #Never seen this done differently, just need to memorize it
           password: $DOCKERHUB_PASSWORD #Assuming similar to bash
       
-      steps:
+    steps:
       - checkout
       - run:
-        command:
-          sudo pip install pipenv
-          pipenv install
+      command:
+        sudo pip install pipenv
+        pipenv install
