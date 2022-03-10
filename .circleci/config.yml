@@ -3,9 +3,11 @@ jobs:
 #start of builds as a default action
   build:
     docker:
-      username: mydockerhub-user
-      password: $DOCKERHUB_PASSWORD
+      - image: cimg/python:3.9.1
+        auth:
+          username: mydockerhub-user
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
-      - run: #runs some command
+      - run: echo "Testing" #runs some command
 #end of builds as a default action
