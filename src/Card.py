@@ -1,5 +1,6 @@
 """
-# TODO: Move to seperate file and finish implementation of inheritance hierarchy
+# Eventual abstract base used for inheritance hierarchy of cards
+# TODO: Finish design of Card inheritance tree
 """
 class Card() :
     """
@@ -25,6 +26,9 @@ class Card() :
     def display_card_type(self)->str :
         return str(type(self))
 
+    """
+    # Protected Members
+    """
     _rank:str
     _suit:str
 
