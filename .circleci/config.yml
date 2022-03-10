@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - run: #runs some command
-        echo "Sup friendos"
+          echo "Sup friendos"
 #end of builds as a default action
