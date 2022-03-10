@@ -1,16 +1,12 @@
-version: 2 #done by default
-jobs: #almost every circleci yaml has one. Basically the main point of the software
-  build: #when you dont use a workflow, you use this
-    working_dir: ~/PythonOOD
-    docker: 
-      - image: cimg/python:3.9.1
-        auth:
-          username: mydockerhub-user #Never seen this done differently, just need to memorize it
-          password: $DOCKERHUB_PASSWORD #Assuming similar to bash
-      
+version: 2.1
+jobs:
+#start of builds as a default action
+  build:
+    docker:
+      username: mydockerhub-user
+      password: $DOCKERHUB_PASSWORD
     steps:
-      - checkout  
-      - run:
-        command:
-          sudo pip install pipenv
-          pipenv install
+      - checkout
+      - run: #runs some command
+        echo "Sup friendos"
+#end of builds as a default action
