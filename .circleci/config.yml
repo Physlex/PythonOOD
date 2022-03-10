@@ -9,8 +9,8 @@ jobs: #almost every circleci yaml has one. Basically the main point of the softw
           password: $DOCKERHUB_PASSWORD #Assuming similar to bash
       
     steps:
-      - checkout
+      - checkout  
       - run:
-      command:
-        sudo pip install pipenv
-        pipenv install
+        command:
+          sudo pip install pipenv
+          pipenv install
