@@ -1,4 +1,4 @@
-from Card import Card
+import cards
 
 """
 # @class CardFactory, "CardFactory", 'CardFactory'
@@ -35,19 +35,21 @@ class CardFactory() :
             if (rank < 1 or rank > 13) :
                 print(f'\'{rank}\' is not a valid card rank')
                 return None
-        
-        if (self.__suit_to_valid[suit] != True) : 
+            else :
+                rank = self.__rankint_to_rankstr[rank]
+
+        if (suit not in self.__suit_to_valid) :
             print(f'\'{suit}\' is not a valid card suit')
             return None
-
-        rank = self.__rankint_to_rankstr[rank]
-        self.__created_card = Card(rank, suit)
+    
+        self.__created_card = self.__suit_to_card[suit](rank, suit)
         return self.__created_card
 
     """
     # Private Members
     """
-    __rankint_to_rankstr:dict = {
+    __created_card:cards.Card    
+    __rankint_to_rankstr = {
         1: 'ace', 2: '2', 3: '3', 4: '4', 5: '5', 
         6: '6', 7: '7', 8: '8', 9: '9', 10: '10',
         11: 'jack', 12: 'queen', 13: 'king'
@@ -58,4 +60,9 @@ class CardFactory() :
         'heart': True,
         'spade': True,
     }
-    __created_card:Card
+    __suit_to_card = {
+        'club': cards.Club,
+        'diamond': cards.Diamond,
+        'heart': cards.Heart,
+        'spade': cards.Spade,
+    }

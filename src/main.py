@@ -1,11 +1,22 @@
-from CardFactory import CardFactory
+import card_factory
+import random
 
-cf = CardFactory()
+def print_cards(suit_cards:list)->None :
+    for iVal in suit_cards :
+        print(f'Card:', iVal.get_type())
+        print(f'Card Suit:', iVal.display_card_suit(), end = "\n\n")
 
-spade_cards:list = []
+cf = card_factory.CardFactory()
+
+deck = [] 
 for i in range(13) :
-    spade_cards.append(cf.create_card(i + 1, 'spade'))
+    rank = i + 1
+    deck.append(cf.create_card(rank, 'spade'))
+    deck.append(cf.create_card(rank, 'diamond'))
+    deck.append(cf.create_card(rank, 'club'))
+    deck.append(cf.create_card(rank, 'heart'))
 
-for i, iVal in enumerate(spade_cards) :
-    print(f'Card: ', iVal.display_card())
-    print(f'Card Type: ', iVal.display_card_type(), end='\n\n')
+print_cards(deck)
+print("Shuffling cards...")
+random.shuffle(deck)
+print(f'Top card is a {deck[len(deck) - 1].get_type()}!')
