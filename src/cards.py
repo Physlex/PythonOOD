@@ -1,8 +1,10 @@
 from abc import ABC, abstractmethod
 
 """
-# Eventual abstract base used for inheritance hierarchy of cards
-# TODO: Finish design of Card inheritance tree
+# @Class Card, "Card", 'Card'
+# @details Abstract base used for inheritance hierarchy of card types
+#          slightly arbitrary, but good for learning how to develop w/ python
+#          polymorphism
 """
 class Card(ABC) :
     """

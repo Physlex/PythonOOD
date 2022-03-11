@@ -38,7 +38,7 @@ class CardFactory() :
             else :
                 rank = self.__rankint_to_rankstr[rank]
 
-        if (suit not in self.__suit_to_valid) :
+        if (suit not in self.__valid_suits) :
             print(f'\'{suit}\' is not a valid card suit')
             return None
     
@@ -54,12 +54,7 @@ class CardFactory() :
         6: '6', 7: '7', 8: '8', 9: '9', 10: '10',
         11: 'jack', 12: 'queen', 13: 'king'
     }
-    __suit_to_valid = {
-        'club': True,
-        'diamond': True,
-        'heart': True,
-        'spade': True,
-    }
+    __valid_suits = ['club', 'diamond', 'heart', 'spade']
     __suit_to_card = {
         'club': cards.Club,
         'diamond': cards.Diamond,
