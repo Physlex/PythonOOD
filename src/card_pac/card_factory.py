@@ -1,5 +1,4 @@
-import cards
-
+import card_pac.cards as cards
 """
 # @class CardFactory, "CardFactory", 'CardFactory'
 # @details, Creates a card on demand and returns the created card

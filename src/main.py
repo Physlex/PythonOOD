@@ -1,5 +1,5 @@
-import card_factory
 import random
+from card_pac import card_factory
 
 def print_cards(suit_cards:list)->None :
     for iVal in suit_cards :
