@@ -15,10 +15,12 @@ jobs:
 #The actual pipeline
     steps:
       - checkout
-      - run: 
+      - run:
+          name: Build venv
           command: |
             python3 -m venv ~/PythonOOD/_venv
             source _venv/bin/activate
       - run:
+          name: run main
           command: |
-            python3 main.py
+            python3 src/main.py
