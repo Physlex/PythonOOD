@@ -15,12 +15,15 @@ jobs:
 #The actual pipeline
     steps:
       - checkout
+      #Creates the environment needed to run the code
       - run:
           name: Build venv
           command: |
             python3 -m venv ~/PythonOOD/_venv
             source _venv/bin/activate
+      #Runs the code to make sure it compiles
       - run:
           name: run main
           command: |
             python3 src/main.py
+##Future tests will be made in a seperate folder, using pytest
