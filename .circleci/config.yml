@@ -16,4 +16,6 @@ jobs:
     steps:
       - checkout
       - run: 
-        command: python3 main.py
+        command: |
+          sudo pip install pipenv
+          pipenv install
