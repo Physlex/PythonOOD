@@ -6,10 +6,10 @@ jobs:
 #Used to define the local environment that py is run in    
     environment:
       PIPENV_VENV_IN_PROJECT: false
-#Authentication for docker
-    auth:
-      username: mydockerhub-user
-      password: $DOCKERHUB_PASSWORD
+# #Authentication for docker
+#     auth:
+#       username: mydockerhub-user
+#       password: $DOCKERHUB_PASSWORD
 #Container for python
     docker:
       - image: cimg/python:3.9.1
