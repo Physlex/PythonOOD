@@ -17,5 +17,5 @@ jobs:
       - checkout
       - run: 
           command: |
-            sudo pip install pipenv
-            pipenv install
+            python3 -m venv ~/PythonOOD
+            source venv/bin/activate
