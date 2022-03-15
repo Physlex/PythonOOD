@@ -19,3 +19,5 @@ jobs:
           command: |
             python3 -m venv ~/PythonOOD/_venv
             source _venv/bin/activate
+          command: |
+            python3 main.py test
