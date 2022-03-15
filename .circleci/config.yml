@@ -3,12 +3,20 @@ jobs:
 #start of builds as a default action
   build:
     working_directory: ~/PythonOOD
+#Used to define the local environment that py is run in    
+    environment:
+      PIPENV_VENV_IN_PROJECT: false
+#Authentication for docker
+    auth:
+      username: mydockerhub-user
+      password: $DOCKERHUB_PASSWORD
+#Container for python
     docker:
       - image: cimg/python:3.9.1
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD
+#The actual pipeline
     steps:
       - checkout
-      - run: echo "Testing" #runs some command
-#end of builds as a default action
+      - run: echo "Testing"
