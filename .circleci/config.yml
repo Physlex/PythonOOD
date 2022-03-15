@@ -17,5 +17,5 @@ jobs:
       - checkout
       - run: 
           command: |
-            python3 -m venv ~/PythonOOD
-            source venv/bin/activate
+            python3 -m venv ~/PythonOOD/_venv
+            source _venv/bin/activate
