@@ -16,5 +16,4 @@ jobs:
     steps:
       - checkout
       - run: 
-        command: |
-          venv run python main.py
+        command: python3 main.py
