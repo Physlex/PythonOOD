@@ -1,22 +1,16 @@
-import random
-from card_pac import card_factory
+from card_pac import deck as _deck
 
-def print_cards(suit_cards:list)->None :
-    for iVal in suit_cards :
-        print(f'Card:', iVal.get_type())
-        print(f'Card Suit:', iVal.display_card_suit(), end = "\n\n")
+deck = _deck.Deck(True)
+deck_list = deck.get_deck_list()
 
-cf = card_factory.CardFactory()
+for i in deck_list :
+    print(f'Card: {i.get_type()}')
 
-deck = [] 
-for i in range(13) :
-    rank = i + 1
-    deck.append(cf.create_card(rank, 'spade'))
-    deck.append(cf.create_card(rank, 'diamond'))
-    deck.append(cf.create_card(rank, 'club'))
-    deck.append(cf.create_card(rank, 'heart'))
+print(f'from the top! We have a... {deck.top().get_type()}!')
 
-print_cards(deck)
-print("Shuffling cards...")
-random.shuffle(deck)
-print(f'Top card is a {deck[len(deck) - 1].get_type()}!')
+for i in range(2) :
+    top_card = deck.pull()
+    print(f'next we draw... {top_card.get_type()}!')
+
+for i in deck.get_played_cards() :
+    print(f'an F for all the cards we lost along the way... {i.get_type()}')
