@@ -8,7 +8,7 @@ import card_pac.cards as cards
 class CardFactory() :
     """
     # CardFactory constructor
-    # @details creates a card factory for use to create cards
+    # @details creates a card factory
     """
     def __init__(self)-> None: 
         pass
@@ -45,15 +45,21 @@ class CardFactory() :
         return self.__created_card
 
     """
+    # Mutators/Extractors
+    """
+    def get_valid_suits(self)->list :
+        return self.__valid_suits
+
+    """
     # Private Members
     """
     __created_card:cards.Card    
+    __valid_suits = ['club', 'diamond', 'heart', 'spade']
     __rankint_to_rankstr = {
         1: 'ace', 2: '2', 3: '3', 4: '4', 5: '5', 
         6: '6', 7: '7', 8: '8', 9: '9', 10: '10',
         11: 'jack', 12: 'queen', 13: 'king'
     }
-    __valid_suits = ['club', 'diamond', 'heart', 'spade']
     __suit_to_card = {
         'club': cards.Club,
         'diamond': cards.Diamond,
