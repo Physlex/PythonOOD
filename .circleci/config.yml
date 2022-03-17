@@ -26,4 +26,5 @@ jobs:
           name: run main
           command: |
             python3 src
+            python3 test
 ##Future tests will be made in a seperate folder, using pytest
