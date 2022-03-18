@@ -6,7 +6,10 @@
 ### Currently developed skills
   - OOD/OOP
   - Factory design pattern
+ 
+### Tech Skills 
   - Branching / Git
-  - Linux (As this was developed on one)
+  - Some linux knowledge like admin priv's, bash, scripting, bins, hidden files, etc.
   - Basic circleci (will be devloped as time goes on)
   - YAML, semi-structured data manipulation
+  - Basic mysql querying
