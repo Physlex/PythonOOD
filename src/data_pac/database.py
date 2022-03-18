@@ -1,4 +1,3 @@
-from cgi import test
 import mysql.connector
 
 """
@@ -57,9 +56,11 @@ def table_create() :
             )
         ''')
 
+
 def table_remove() :
     global database_cursor
     database_cursor.execute('DROP TABLE IF EXISTS Junky_junk_junk')
+
 
 id_to_name = {
     0: "raggy",
@@ -80,6 +81,7 @@ def table_insert() :
         ''')
         test_database.commit()
 
+
 def table_query() :
     print('\nQuerying table in: test\n')
     database_cursor.execute('''
@@ -88,6 +90,8 @@ def table_query() :
     for x in database_cursor : 
         print(x)
 
+
+
 """
 # main proc globals
 """
@@ -95,10 +99,10 @@ def table_query() :
 insert:bool = False
 remove:bool = False
 
+
 """
 # Code starts here
 """
-
 
 #Creating Data
 db_connect()
