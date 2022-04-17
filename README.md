@@ -1,10 +1,9 @@
 ## First official python project, using oop and more proper file structure  
 
-- There is a simple goal in place, show off the skills I have in a useful language,  
-- I wil eventually add some extra tech like mysql-server and apache web server
+- There is a simple goal in place, show off the skills I have in a useful language
 
 ### Currently developed skills
-  - OOD/OOP
+  - OOD/OOP w/ python
   - Factory design pattern
  
 ### Tech Skills 
